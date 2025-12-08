@@ -139,9 +139,10 @@ export default function Portfolio() {
               transition={{ duration: 0.6 }}
               className="mt-4 text-slate-300 text-sm md:text-base max-w-xl"
             >
-              7+ months of hands-on experience designing and developing dashboards,
-              e-commerce UIs, landing pages, and interactive components using React,
-              Next.js, and Tailwind CSS with a strong focus on pixel-perfect UI.
+              7+ months of hands-on experience designing and developing
+              dashboards, e-commerce UIs, landing pages, and interactive
+              components using React, Next.js, and Tailwind CSS with a strong
+              focus on pixel-perfect UI.
             </motion.p>
 
             <motion.div
@@ -406,8 +407,9 @@ export default function Portfolio() {
           <div className="mt-8 grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
             <div className="rounded-3xl border border-white/10 bg-slate-900/75 backdrop-blur-xl p-6 md:p-7">
               <p className="text-sm md:text-base text-slate-200 mb-4">
-                Looking for a React / Next.js developer for your team or project?
-                I’m open to full-time, internship, and freelance opportunities.
+                Looking for a React / Next.js developer for your team or
+                project? I’m open to full-time, internship, and freelance
+                opportunities.
               </p>
               <div className="flex flex-col gap-3 text-sm">
                 <div>
@@ -418,7 +420,7 @@ export default function Portfolio() {
                     href="mailto:your-email@example.com"
                     className="text-cyan-300 hover:underline break-all"
                   >
-                  mohanrajmohan1725@gmail.com
+                    mohanrajmohan1725@gmail.com
                   </a>
                 </div>
                 <div>
@@ -435,39 +437,68 @@ export default function Portfolio() {
                   </a>
                 </div>
                 <div>
-  <p className="text-slate-400 text-xs uppercase tracking-wide">
-    LinkedIn
-  </p>
-  <a
-    href="https://www.linkedin.com/in/mohanraj-arumugam-870a47356"
-    target="_blank"
-    rel="noreferrer"
-    className="text-cyan-300 hover:underline"
-  >
-    www.linkedin.com/in/mohanraj-arumugam-870a47356
-  </a>
-</div>
-
+                  <p className="text-slate-400 text-xs uppercase tracking-wide">
+                    LinkedIn
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/mohanraj-arumugam-870a47356"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-cyan-300 hover:underline"
+                  >
+                    www.linkedin.com/in/mohanraj-arumugam-870a47356
+                  </a>
+                </div>
               </div>
             </div>
 
-            <motion.div
+            <motion.form
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-3xl border border-violet-500/40 bg-gradient-to-br from-violet-600/40 via-fuchsia-600/40 to-cyan-500/40 p-[1px]"
+              className="rounded-3xl border border-violet-500/40 bg-slate-900/80 backdrop-blur-xl p-6 md:p-7 w-full space-y-4 shadow-lg"
+              onSubmit={(e) => e.preventDefault()}
             >
-              <div className="h-full w-full rounded-3xl bg-slate-950/90 p-6 flex flex-col justify-center">
-                <p className="text-sm text-slate-200 mb-3">
-                  Quick message:
-                </p>
-                <p className="text-xs text-slate-300">
-                  👉 You can customize this section to embed a real contact form
-                  later (React Hook Form / simple HTML form). For now, it works
-                  as a beautiful CTA block.
-                </p>
+              <div className="flex flex-col text-left">
+                <label className="text-xs font-medium text-slate-300 mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="px-3 py-2 rounded-xl bg-slate-800/60 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400"
+                />
               </div>
-            </motion.div>
+
+              <div className="flex flex-col text-left">
+                <label className="text-xs font-medium text-slate-300 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-3 py-2 rounded-xl bg-slate-800/60 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400"
+                />
+              </div>
+
+              <div className="flex flex-col text-left">
+                <label className="text-xs font-medium text-slate-300 mb-1">
+                  Message
+                </label>
+                <textarea
+                  rows="4"
+                  placeholder="Write your message..."
+                  className="px-3 py-2 rounded-xl bg-slate-800/60 border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-cyan-400 resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-3 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-400 text-slate-900 text-sm font-semibold shadow-lg hover:scale-[1.02] transition-transform"
+              >
+                Send Message
+              </button>
+            </motion.form>
           </div>
         </section>
       </main>
